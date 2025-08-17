@@ -187,7 +187,7 @@ with st.spinner("Entraînement du modèle…"):
 # Évaluation
 preds = model.predict(X_test)
 mae = mean_absolute_error(y_test, preds)
-rmse = mean_squared_error(y_test, preds, squared=False)
+rmse = mean_squared_error(y_test, preds, squared=True) ** 0.5
 
 c1, c2, c3 = st.columns(3)
 c1.metric("MAE", f"{mae:.2f}")
@@ -313,5 +313,6 @@ with col2:
     })
     csv_bytes = comp.to_csv(index=False).encode('utf-8')
     st.download_button("⬇️ Exporter prédictions test (CSV)", csv_bytes, file_name="predictions_test.csv", mime="text/csv")
+
 
 st.caption("© 2025 – Adel Abbou – Prévision de Demande – Streamlit Vitrine")
