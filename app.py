@@ -318,3 +318,45 @@ with col2:
 
 st.caption("© 2025 – Adel Abbou – Prévision de Demande – Streamlit Vitrine")
 
+# Section Aide
+st.markdown("## ❓ Aide - Comment utiliser l'application")
+
+st.markdown("""
+### 📌 Étapes principales
+1. **Accéder aux données**
+   - Par défaut, l’app charge un dataset de démonstration.
+   - Tu peux aussi uploader ton propre CSV (il doit contenir les colonnes :  
+     `date, quantite_demandee, site_id, produit_id, meteo, jour_semaine, temp_celsius, promo_active, stock_disponible, temps_livraison_moyen_j`).
+
+2. **Explorer**
+   - Consulte l’aperçu du dataset affiché.
+   - Vérifie que les colonnes sont correctes.
+
+3. **Évaluer le modèle**
+   - L’app calcule automatiquement les métriques **MAE** et **RMSE**.
+   - Tu peux voir le graphique *valeurs réelles vs prédictions* pour juger de la performance.
+
+4. **Analyser les variables importantes**
+   - Un graphique te montre les variables qui influencent le plus la demande.
+
+5. **Simuler un scénario**
+   - Dans la section Simulation :
+     - Choisis un site, un produit, une date, une météo, etc.
+     - Clique sur **“Prédire la demande du scénario”** pour obtenir une estimation.
+
+6. **Exporter**
+   - Télécharge le modèle (`.joblib`) pour l’utiliser en local.
+   - Télécharge les prédictions générées (`.csv`) pour analyse.
+
+---
+
+### 💡 Astuces
+- Tu peux tester plusieurs scénarios d’affilée, le modèle recalcule instantanément.
+- Si tu ne vois pas les bonnes colonnes, vérifie le format de ton CSV.
+- En cas de problème, contacte l’auteur via GitHub ou LinkedIn.
+
+---
+""")
+
+
+
