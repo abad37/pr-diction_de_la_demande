@@ -325,8 +325,7 @@ st.markdown("""
 ### 📌 Étapes principales
 1. **Accéder aux données**
    - Par défaut, l’app charge un dataset de démonstration.
-   - Tu peux aussi uploader ton propre CSV (il doit contenir les colonnes :  
-     `date, quantite_demandee, site_id, produit_id, meteo, jour_semaine, temp_celsius, promo_active, stock_disponible, temps_livraison_moyen_j`).
+   - Tu peux aussi uploader ton propre CSV.
 
 2. **Explorer**
    - Consulte l’aperçu du dataset affiché.
@@ -357,6 +356,7 @@ st.markdown("""
 
 ---
 """)
+
 
 
 
