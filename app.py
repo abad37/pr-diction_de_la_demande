@@ -187,7 +187,8 @@ with st.spinner("Entraînement du modèle…"):
 # Évaluation
 preds = model.predict(X_test)
 mae = mean_absolute_error(y_test, preds)
-rmse = mean_squared_error(y_test, preds, squared=True) ** 0.5
+mse = mean_squared_error(y_test, preds)
+rmse = np.sqrt(mse)
 
 c1, c2, c3 = st.columns(3)
 c1.metric("MAE", f"{mae:.2f}")
@@ -316,3 +317,4 @@ with col2:
 
 
 st.caption("© 2025 – Adel Abbou – Prévision de Demande – Streamlit Vitrine")
+
